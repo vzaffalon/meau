@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "517147490895",
+    "firebase_url": "https://meau-be33a.firebaseio.com",
+    "project_id": "meau-be33a",
+    "storage_bucket": "meau-be33a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517147490895:android:a4071290886e73d4",
+        "android_client_info": {
+          "package_name": "vbv.meau"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517147490895-c8dbacnh0qv3g8658erv9vlecbvec96i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx38VtQbwd0zkOl42nPDl2Bi6p17Be2ZA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
