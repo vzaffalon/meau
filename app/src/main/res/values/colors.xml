@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="amareloApp">#ffd358</color>
+    <color name="azulApp">#88c9bf</color>
+    <color name="corLetraButtons">#434343</color>
+    <color name="corLetraTextView">#757575</color>
+
 </resources>
