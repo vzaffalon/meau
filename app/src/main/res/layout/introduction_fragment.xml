@@ -2,15 +2,12 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-<<<<<<< HEAD:app/src/main/res/layout/introduction_fragment.xml
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:layout_height="match_parent">
-=======
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
->>>>>>> 565fca586d1167b626dab32da104833695ae4166:app/src/main/res/layout/tela_inicial.xml
 
     <TextView
         android:layout_width="match_parent"
@@ -31,7 +28,8 @@
         android:textSize="8pt"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="192dp" />
+        tools:layout_editor_absoluteY="192dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonAjudar"

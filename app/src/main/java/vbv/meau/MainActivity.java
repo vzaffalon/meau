@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        IntroductionFragment introductionFragment = new IntroductionFragment();
-        changeFragment(introductionFragment);
+        createFirstFragment();
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
@@ -152,8 +151,10 @@ public class MainActivity extends AppCompatActivity {
 
                         switch ((int) drawerItem.getIdentifier()){
                             case 1:
-                                MyPerfilFragment myPerfilFragment = new MyPerfilFragment();
+                                IntroductionFragment myPerfilFragment = new IntroductionFragment();
                                 changeFragment(myPerfilFragment);
+//                                MyPerfilFragment myPerfilFragment = new MyPerfilFragment();
+//                                changeFragment(myPerfilFragment);
                                 break;
                             case 2:
                                 MyPetsFragment myPetsFragment = new MyPetsFragment();
@@ -230,6 +231,14 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
 
+    }
+
+    private void createFirstFragment(){
+        // Create a new Fragment to be placed in the activity layout
+        IntroductionFragment firstFragment = new IntroductionFragment();
+        // Add the fragment to the 'fragment_container' FrameLayout
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.fragment_container, firstFragment).commit();
     }
 
 
