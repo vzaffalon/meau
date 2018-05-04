@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="navigation_drawer_header">#88C9BF</color>
     <color name="navigation_drawer_primary_item">#FEE29B</color>
+    <color name="amareloApp">#ffd358</color>
+    <color name="azulApp">#88c9bf</color>
+    <color name="corLetraButtons">#434343</color>
+    <color name="corLetraTextView">#757575</color>
 </resources>
