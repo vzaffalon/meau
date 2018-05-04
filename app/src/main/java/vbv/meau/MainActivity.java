@@ -27,6 +27,7 @@ import vbv.meau.fragments.ConfigurationsFragment;
 import vbv.meau.fragments.EventsFragment;
 import vbv.meau.fragments.FavoritesFragment;
 import vbv.meau.fragments.HelpPetFragment;
+import vbv.meau.fragments.IntroductionFragment;
 import vbv.meau.fragments.LegislationFragment;
 import vbv.meau.fragments.MyPerfilFragment;
 import vbv.meau.fragments.MyPetsFragment;
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        IntroductionFragment introductionFragment = new IntroductionFragment();
+        changeFragment(introductionFragment);
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
@@ -146,15 +150,14 @@ public class MainActivity extends AppCompatActivity {
                         SecondaryDrawerItem item17 = new SecondaryDrawerItem().withIdentifier(17).withName("Privacidade");
                         PrimaryDrawerItem item18 = new PrimaryDrawerItem().withIdentifier(18).withName("Sair");
 
-                        String hue;
                         switch ((int) drawerItem.getIdentifier()){
                             case 1:
-                                MyPetsFragment myPetsFragment = new MyPetsFragment();
-                                changeFragment(myPetsFragment);
-                                break;
-                            case 2:
                                 MyPerfilFragment myPerfilFragment = new MyPerfilFragment();
                                 changeFragment(myPerfilFragment);
+                                break;
+                            case 2:
+                                MyPetsFragment myPetsFragment = new MyPetsFragment();
+                                changeFragment(myPetsFragment);
                                 break;
                             case 3:
                                 FavoritesFragment favoritesFragment = new FavoritesFragment();
