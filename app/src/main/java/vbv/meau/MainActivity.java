@@ -1,5 +1,7 @@
 package vbv.meau;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -15,6 +17,22 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
+
+import vbv.meau.fragments.AdoptPetFragment;
+import vbv.meau.fragments.AdoptionHistoryFragment;
+import vbv.meau.fragments.AdoptionTermsFragment;
+import vbv.meau.fragments.ApadrinharPetFragment;
+import vbv.meau.fragments.ChatFragment;
+import vbv.meau.fragments.ConfigurationsFragment;
+import vbv.meau.fragments.EventsFragment;
+import vbv.meau.fragments.FavoritesFragment;
+import vbv.meau.fragments.HelpPetFragment;
+import vbv.meau.fragments.LegislationFragment;
+import vbv.meau.fragments.MyPerfilFragment;
+import vbv.meau.fragments.MyPetsFragment;
+import vbv.meau.fragments.PrivacyFragment;
+import vbv.meau.fragments.RegisterPetFragment;
+import vbv.meau.fragments.TipsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -109,13 +127,119 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
 
-                        switch (position){
-                            case 0:
+                        SecondaryDrawerItem item1 = new SecondaryDrawerItem().withIdentifier(1).withName("Meu Perfil");
+                        SecondaryDrawerItem item2 = new SecondaryDrawerItem().withIdentifier(2).withName("Meus pets");
+                        SecondaryDrawerItem item3 = new SecondaryDrawerItem().withIdentifier(3).withName("Favoritos");
+                        SecondaryDrawerItem item4 = new SecondaryDrawerItem().withIdentifier(4).withName("Chat");
+                        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName("Atalhos");
+                        SecondaryDrawerItem item6 = new SecondaryDrawerItem().withIdentifier(6).withName("Cadastrar um pet");
+                        SecondaryDrawerItem item7 = new SecondaryDrawerItem().withIdentifier(7).withName("Adotar um pet");
+                        SecondaryDrawerItem item8 = new SecondaryDrawerItem().withIdentifier(8).withName("Ajudar um pet");
+                        SecondaryDrawerItem item9 = new SecondaryDrawerItem().withIdentifier(9).withName("Apadrinhar um pet");
+                        PrimaryDrawerItem item10 = new PrimaryDrawerItem().withIdentifier(10).withName("Informações");
+                        SecondaryDrawerItem item11 = new SecondaryDrawerItem().withIdentifier(11).withName("Dicas");
+                        SecondaryDrawerItem item12 = new SecondaryDrawerItem().withIdentifier(12).withName("Eventos");
+                        SecondaryDrawerItem item13 = new SecondaryDrawerItem().withIdentifier(13).withName("Legislações");
+                        SecondaryDrawerItem item14 = new SecondaryDrawerItem().withIdentifier(14).withName("Termo de adoção");
+                        SecondaryDrawerItem item15 = new SecondaryDrawerItem().withIdentifier(15).withName("Histórias de adoção");
+                        PrimaryDrawerItem item16 = new PrimaryDrawerItem().withIdentifier(16).withName("Configurações");
+                        SecondaryDrawerItem item17 = new SecondaryDrawerItem().withIdentifier(17).withName("Privacidade");
+                        PrimaryDrawerItem item18 = new PrimaryDrawerItem().withIdentifier(18).withName("Sair");
+
+                        String hue;
+                        switch ((int) drawerItem.getIdentifier()){
+                            case 1:
+                                MyPetsFragment myPetsFragment = new MyPetsFragment();
+                                changeFragment(myPetsFragment);
+                                break;
+                            case 2:
+                                MyPerfilFragment myPerfilFragment = new MyPerfilFragment();
+                                changeFragment(myPerfilFragment);
+                                break;
+                            case 3:
+                                FavoritesFragment favoritesFragment = new FavoritesFragment();
+                                changeFragment(favoritesFragment);
+                                break;
+                            case 4:
+                                ChatFragment chatFragment = new ChatFragment();
+                                changeFragment(chatFragment);
+                                break;
+                            case 6:
+                                RegisterPetFragment registerPetFragment = new RegisterPetFragment();
+                                changeFragment(registerPetFragment);
+                                break;
+                            case 7:
+                                AdoptPetFragment adoptPetFragment = new AdoptPetFragment();
+                                changeFragment(adoptPetFragment);
+                                break;
+                            case 8:
+                                HelpPetFragment helpPetFragment = new HelpPetFragment();
+                                changeFragment(helpPetFragment);
+                                break;
+                            case 9:
+                                ApadrinharPetFragment apadrinharPetFragment = new ApadrinharPetFragment();
+                                changeFragment(apadrinharPetFragment);
+                                break;
+
+                            case 11:
+                                TipsFragment tipsFragment = new TipsFragment();
+                                changeFragment(tipsFragment);
+                                break;
+
+                            case 12:
+                                EventsFragment eventsFragments = new EventsFragment();
+                                changeFragment(eventsFragments);
+                                break;
+
+                            case 13:
+                                LegislationFragment legislationFragment = new LegislationFragment();
+                                changeFragment(legislationFragment);
+                                break;
+
+                            case 14:
+                                AdoptionTermsFragment adoptionTermsFragment = new AdoptionTermsFragment();
+                                changeFragment(adoptionTermsFragment);
+                                break;
+
+                            case 15:
+                                AdoptionHistoryFragment adoptionHistoryFragment = new AdoptionHistoryFragment();
+                                changeFragment(adoptionHistoryFragment);
+                                break;
+
+                            case 16:
+                                ConfigurationsFragment configurationsFragment = new ConfigurationsFragment();
+                                changeFragment(configurationsFragment);
+                                break;
+
+                            case 17:
+                                PrivacyFragment privacyFragment = new PrivacyFragment();
+                                changeFragment(privacyFragment);
+                                break;
+
+                            case 18:
+                                //quit
+                                break;
 
                         }
                         return true;
                     }
                 })
                 .build();
+
+
+    }
+
+
+    private void changeFragment(Fragment fragment){
+        // Create fragment and give it an argument specifying the article it should show
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        // Replace whatever is in the fragment_container view with this fragment,
+        // and add the transaction to the back stack so the user can navigate back
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.addToBackStack(null);
+
+        // Commit the transaction
+        transaction.commit();
     }
 }
