@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
 
     <TextView
         android:layout_width="match_parent"
@@ -22,31 +24,36 @@
         android:text="ADOTAR"
         android:textColor="@color/corLetraButtons"
         android:textSize="8pt"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="126dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="192dp" />
 
     <Button
         android:id="@+id/buttonAjudar"
         android:layout_width="232dp"
         android:layout_height="40dp"
+        android:layout_marginTop="20dp"
         android:background="@color/amareloApp"
         android:fontFamily="sans-serif"
         android:text="AJUDAR"
         android:textColor="@color/corLetraButtons"
         android:textSize="8pt"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="179dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonAdotar" />
 
     <Button
         android:id="@+id/buttonCadastrarAnimal"
         android:layout_width="232dp"
         android:layout_height="40dp"
+        android:layout_marginTop="20dp"
         android:background="@color/amareloApp"
         android:fontFamily="sans-serif"
         android:text="CADASTRAR ANIMAL"
         android:textColor="@color/corLetraButtons"
         android:textSize="8pt"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="235dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonAjudar" />
 
 </android.support.constraint.ConstraintLayout>
