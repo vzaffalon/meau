@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">meau</string>
-    <string name="fraseInicial">Bem vindo ao Meau! Aqui você pode adotar, doar e ajudar cães e gatos com facilidade. Qual seu interesse?</string>
+    <string name="fraseInicial1">Bem vindo ao Meau!</string>
+    <string name="fraseInicial2">Aqui você pode adotar, doar e ajudar</string>
+    <string name="fraseInicial3">cães e gatos com facilidade.</string>
+    <string name="fraseInicial4">Qual seu interesse?</string>
+    <string name="ola">Olá!</string>
+    <string name="login">login</string>
+    <string name="adotar">ADOTAR</string>
+    <string name="ajudar">AJUDAR</string>
+    <string name="cadastrarAnimal">CADASTRAR ANIMAL</string>
 
 </resources>
