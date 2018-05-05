@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">meau</string>
-    <string name="textoTelaInicial">Bem vindo ao Meau!\nAqui você pode adotar, doar e ajudar\ncães e gatos com facilidade.\nQual seu interesse?</string>
+    <string name="fraseInicial">Bem vindo ao Meau! Aqui você pode adotar, doar e ajudar cães e gatos com facilidade. Qual seu interesse?</string>
 
 </resources>
