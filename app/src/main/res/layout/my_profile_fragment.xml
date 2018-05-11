@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backGroundApp">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -11,6 +13,219 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/backGroundApp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:id="@+id/profileNamePic"
+            android:textSize="15dp"
+            android:textColor="@color/corLetraButtons"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:id="@+id/completeNameHeader"
+            android:textSize="15dp"
+            android:text="@string/completeName"
+            android:textColor="@color/azulApp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/profileNamePic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:id="@+id/completeName"
+            android:textSize="17dp"
+            android:textColor="@color/corLetraTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/completeNameHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:id="@+id/ageHeader"
+            android:textSize="15dp"
+            android:text="@string/age"
+            android:textColor="@color/azulApp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/completeName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:id="@+id/age"
+            android:textSize="17dp"
+            android:textColor="@color/corLetraTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/ageHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:id="@+id/emailHeader"
+            android:textSize="15dp"
+            android:text="@string/email"
+            android:textColor="@color/azulApp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/age"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:id="@+id/email"
+            android:textSize="17dp"
+            android:textColor="@color/corLetraTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/emailHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:id="@+id/locationHeader"
+            android:textSize="15dp"
+            android:text="@string/location"
+            android:textColor="@color/azulApp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:id="@+id/location"
+            android:textSize="17dp"
+            android:textColor="@color/corLetraTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/locationHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:id="@+id/addressHeader"
+            android:textSize="15dp"
+            android:text="@string/address"
+            android:textColor="@color/azulApp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:id="@+id/address"
+            android:textSize="17dp"
+            android:textColor="@color/corLetraTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/addressHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:id="@+id/phoneHeader"
+            android:textSize="15dp"
+            android:text="@string/phone"
+            android:textColor="@color/azulApp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:id="@+id/phone"
+            android:textSize="17dp"
+            android:textColor="@color/corLetraTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/phoneHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:id="@+id/usernameHeader"
+            android:textSize="15dp"
+            android:text="@string/username"
+            android:textColor="@color/azulApp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/phone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:id="@+id/username"
+            android:textSize="17dp"
+            android:textColor="@color/corLetraTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/usernameHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:id="@+id/historyHeader"
+            android:textSize="15dp"
+            android:text="@string/history"
+            android:textColor="@color/azulApp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:id="@+id/history"
+            android:textSize="17dp"
+            android:textColor="@color/corLetraTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/historyHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
