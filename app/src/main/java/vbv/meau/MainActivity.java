@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
 
                         switch ((int) drawerItem.getIdentifier()){
                             case 1:
-                                IntroductionFragment myPerfilFragment = new IntroductionFragment();
+                                MyPerfilFragment myPerfilFragment = new MyPerfilFragment();
                                 changeFragment(myPerfilFragment);
 //                                MyPerfilFragment myPerfilFragment = new MyPerfilFragment();
 //                                changeFragment(myPerfilFragment);
