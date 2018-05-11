@@ -6,19 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/backGroundApp">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white">
-    </android.support.v7.widget.Toolbar>
 
     <TextView
         android:id="@+id/ola"
         android:layout_width="140dp"
         android:layout_height="80dp"
         android:fontFamily="@font/courgette_regular"
-        android:text="Olá!"
+        android:text="@string/ola"
         android:textColor="@color/amareloApp"
         android:textSize="30pt"
         android:layout_marginTop="40dp"
@@ -60,7 +54,6 @@
         android:layout_height="25dp"
         android:fontFamily="Roboto"
         app:layout_constraintLeft_toLeftOf="parent"
-
         app:layout_constraintRight_toRightOf="parent"
         android:text="@string/fraseInicial3"
         android:textColor="@color/corLetraTextView"
