@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -15,18 +14,18 @@ import vbv.meau.R;
 import vbv.meau.models.Pet;
 
 /**
- * Created by vzaffalon on 10/05/2018.
+ * Created by vzaffalon on 11/05/2018.
  */
 
-public class MyPetsAdapter extends RecyclerView.Adapter<MyPetsAdapter.ViewHolder> {
+public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.ViewHolder> {
 
     private final Context context;
 
     private List<Pet> pets;
 
-    private MyPetsAdapter.OnItemClickListener onItemClickListener;
+    private FavoritesAdapter.OnItemClickListener onItemClickListener;
 
-    public MyPetsAdapter(Context context, List<Pet> pets, OnItemClickListener onItemClickListener){
+    public FavoritesAdapter(Context context, List<Pet> pets, OnItemClickListener onItemClickListener){
         this.context=context;
         this.pets = pets;
         this.onItemClickListener = onItemClickListener;
@@ -34,7 +33,7 @@ public class MyPetsAdapter extends RecyclerView.Adapter<MyPetsAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.adapter_pets,viewGroup,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.adapter_favorites,viewGroup,false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }

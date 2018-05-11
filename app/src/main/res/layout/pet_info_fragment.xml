@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout android:id="@+id/adapter_pets"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/dog"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19dp"
+            android:text="Pequi"
+            android:textColor="#434343"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:text="APADRINHAMENTO | AJUDA"
+            android:textColor="#434343"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Sexo"
+                    android:textAllCaps="true"
+                    android:textColor="#589b9b"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="Macho"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Porte"
+                    android:textAllCaps="true"
+                    android:textColor="#589b9b"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="Pequeno"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp"
+                android:gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textAllCaps="true"
+                    android:text="Idade"
+                    android:textColor="#589b9b"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="Adulto"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Localização"
+                android:textAllCaps="true"
+                android:textColor="#589b9b"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="Planaltina - Df"
+                android:textColor="#757575"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="#e0e0e0"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Castrado"
+                    android:textAllCaps="true"
+                    android:textColor="#589b9b"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="Sim"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textAllCaps="true"
+                    android:text="Vermifugado"
+                    android:textColor="#589b9b"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="Sim"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Vacinado"
+                    android:textAllCaps="true"
+                    android:textColor="#589b9b"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="Não"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textAllCaps="true"
+                    android:text="Doenças"
+                    android:textColor="#589b9b"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="Nenhuma"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="#e0e0e0"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Temperamento"
+                android:textAllCaps="true"
+                android:textColor="#589b9b"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="Brincalhão e dócil"
+                android:textColor="#757575"/>
+        </LinearLayout>
+
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="#e0e0e0"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="O pequi precisa de"
+                android:textAllCaps="true"
+                android:textColor="#589b9b"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="Ajuda financeira e alimento"
+                android:textColor="#757575"/>
+        </LinearLayout>
+
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="#e0e0e0"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Exigências do doador"
+                android:textAllCaps="true"
+                android:textColor="#589b9b"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="Termo de apadrinhamento, auxílio financeiro com alimentação"
+                android:textColor="#757575"/>
+        </LinearLayout>
+
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="#e0e0e0"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Mais sobre o pequi"
+                android:textAllCaps="true"
+                android:textColor="#589b9b"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="Termo de apadrinhamento, auxílio financeiro com alimentação"
+                android:textColor="#757575"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="#88c9bf"
+            android:text="VER INTERESSADOS"
+            android:padding="10dp"
+            android:textColor="#757575"/>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="#88c9bf"
+                android:padding="10dp"
+                android:text="REMOVER PET"
+                android:textColor="#757575"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+</ScrollView>

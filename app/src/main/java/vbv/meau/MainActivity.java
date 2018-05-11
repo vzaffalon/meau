@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 .withActivity(this)
                 .withHeaderBackground(R.color.navigation_drawer_header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Mike Penz").withEmail("mikepenz@gmail.com").withIcon(getResources().getDrawable(R.drawable.victor))
+                        new ProfileDrawerItem().withName("Victor").withEmail("zaffalonvictor@gmail.com").withIcon(getResources().getDrawable(R.drawable.victor))
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -85,10 +85,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         //create the drawer and remember the `Drawer` result object
-        Drawer result = new DrawerBuilder()
+        final Drawer result = new DrawerBuilder()
                 .withActivity(this)
                 .withAccountHeader(headerResult)
                 .withToolbar(myToolbar)
+                .withCloseOnClick(true)
                 .addDrawerItems(
                         item1,
                         new DividerDrawerItem(),
