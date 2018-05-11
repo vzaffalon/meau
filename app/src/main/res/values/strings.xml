@@ -9,5 +9,15 @@
     <string name="adotar">ADOTAR</string>
     <string name="ajudar">AJUDAR</string>
     <string name="cadastrarAnimal">CADASTRAR ANIMAL</string>
+    <string name="completeName">NOME COMPLETO</string>
+    <string name="age">IDADE</string>
+    <string name="email">EMAIL</string>
+    <string name="location">LOCALIZAÇÃO</string>
+    <string name="address">ENDEREÇO</string>
+    <string name="phone">TELEFONE</string>
+    <string name="username">NOME DE USUÁRIO</string>
+    <string name="history">HISTÓRICO</string>
+    <string name="chat">CHAT</string>
+    <string name="histories">HISTÓRIAS</string>
 
 </resources>
