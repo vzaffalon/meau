@@ -17,7 +17,7 @@
         android:id="@+id/ola"
         android:layout_width="140dp"
         android:layout_height="80dp"
-        android:fontFamily="@font/CourgetteRegular"
+        android:fontFamily="@font/courgette_regular"
         android:text="Olá!"
         android:textColor="@color/amareloApp"
         android:textSize="30pt"
