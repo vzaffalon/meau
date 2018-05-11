@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 .withActivity(this)
                 .withAccountHeader(headerResult)
                 .withToolbar(myToolbar)
-                .withCloseOnClick(true)
                 .addDrawerItems(
                         item1,
                         new DividerDrawerItem(),
@@ -130,26 +129,6 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-
-                        SecondaryDrawerItem item1 = new SecondaryDrawerItem().withIdentifier(1).withName("Meu Perfil");
-                        SecondaryDrawerItem item2 = new SecondaryDrawerItem().withIdentifier(2).withName("Meus pets");
-                        SecondaryDrawerItem item3 = new SecondaryDrawerItem().withIdentifier(3).withName("Favoritos");
-                        SecondaryDrawerItem item4 = new SecondaryDrawerItem().withIdentifier(4).withName("Chat");
-                        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName("Atalhos");
-                        SecondaryDrawerItem item6 = new SecondaryDrawerItem().withIdentifier(6).withName("Cadastrar um pet");
-                        SecondaryDrawerItem item7 = new SecondaryDrawerItem().withIdentifier(7).withName("Adotar um pet");
-                        SecondaryDrawerItem item8 = new SecondaryDrawerItem().withIdentifier(8).withName("Ajudar um pet");
-                        SecondaryDrawerItem item9 = new SecondaryDrawerItem().withIdentifier(9).withName("Apadrinhar um pet");
-                        PrimaryDrawerItem item10 = new PrimaryDrawerItem().withIdentifier(10).withName("Informações");
-                        SecondaryDrawerItem item11 = new SecondaryDrawerItem().withIdentifier(11).withName("Dicas");
-                        SecondaryDrawerItem item12 = new SecondaryDrawerItem().withIdentifier(12).withName("Eventos");
-                        SecondaryDrawerItem item13 = new SecondaryDrawerItem().withIdentifier(13).withName("Legislações");
-                        SecondaryDrawerItem item14 = new SecondaryDrawerItem().withIdentifier(14).withName("Termo de adoção");
-                        SecondaryDrawerItem item15 = new SecondaryDrawerItem().withIdentifier(15).withName("Histórias de adoção");
-                        PrimaryDrawerItem item16 = new PrimaryDrawerItem().withIdentifier(16).withName("Configurações");
-                        SecondaryDrawerItem item17 = new SecondaryDrawerItem().withIdentifier(17).withName("Privacidade");
-                        PrimaryDrawerItem item18 = new PrimaryDrawerItem().withIdentifier(18).withName("Sair");
-
                         switch ((int) drawerItem.getIdentifier()){
                             case 1:
                                 MyPerfilFragment myPerfilFragment = new MyPerfilFragment();
@@ -224,9 +203,10 @@ public class MainActivity extends AppCompatActivity {
                                 break;
 
                         }
-                        return true;
+                        return false;
                     }
                 })
+                .withCloseOnClick(true)
                 .build();
 
 
