@@ -12,6 +12,8 @@ import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
+import com.mikepenz.materialdrawer.model.ExpandableBadgeDrawerItem;
+import com.mikepenz.materialdrawer.model.ExpandableDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
@@ -23,6 +25,7 @@ import vbv.meau.fragments.AdoptionHistoryFragment;
 import vbv.meau.fragments.AdoptionTermsFragment;
 import vbv.meau.fragments.ApadrinharPetFragment;
 import vbv.meau.fragments.ChatFragment;
+import vbv.meau.fragments.ChatListFragment;
 import vbv.meau.fragments.ConfigurationsFragment;
 import vbv.meau.fragments.EventsFragment;
 import vbv.meau.fragments.FavoritesFragment;
@@ -64,24 +67,45 @@ public class MainActivity extends AppCompatActivity {
 
         //if you want to update the items at a later time it is recommended to keep it in a variable
 //        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("teste");
-        SecondaryDrawerItem item1 = new SecondaryDrawerItem().withIdentifier(1).withName("Meu Perfil");
-        SecondaryDrawerItem item2 = new SecondaryDrawerItem().withIdentifier(2).withName("Meus pets");
-        SecondaryDrawerItem item3 = new SecondaryDrawerItem().withIdentifier(3).withName("Favoritos");
-        SecondaryDrawerItem item4 = new SecondaryDrawerItem().withIdentifier(4).withName("Chat");
-        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName("Atalhos");
-        SecondaryDrawerItem item6 = new SecondaryDrawerItem().withIdentifier(6).withName("Cadastrar um pet");
-        SecondaryDrawerItem item7 = new SecondaryDrawerItem().withIdentifier(7).withName("Adotar um pet");
-        SecondaryDrawerItem item8 = new SecondaryDrawerItem().withIdentifier(8).withName("Ajudar um pet");
-        SecondaryDrawerItem item9 = new SecondaryDrawerItem().withIdentifier(9).withName("Apadrinhar um pet");
-        PrimaryDrawerItem item10 = new PrimaryDrawerItem().withIdentifier(10).withName("Informações");
-        SecondaryDrawerItem item11 = new SecondaryDrawerItem().withIdentifier(11).withName("Dicas");
-        SecondaryDrawerItem item12 = new SecondaryDrawerItem().withIdentifier(12).withName("Eventos");
-        SecondaryDrawerItem item13 = new SecondaryDrawerItem().withIdentifier(13).withName("Legislações");
-        SecondaryDrawerItem item14 = new SecondaryDrawerItem().withIdentifier(14).withName("Termo de adoção");
-        SecondaryDrawerItem item15 = new SecondaryDrawerItem().withIdentifier(15).withName("Histórias de adoção");
-        PrimaryDrawerItem item16 = new PrimaryDrawerItem().withIdentifier(16).withName("Configurações");
-        SecondaryDrawerItem item17 = new SecondaryDrawerItem().withIdentifier(17).withName("Privacidade");
-        PrimaryDrawerItem item18 = new PrimaryDrawerItem().withIdentifier(18).withName("Sair");
+        ExpandableDrawerItem item1 = new ExpandableDrawerItem().withName("Perfil").withIdentifier(999).withSelectable(false).withSelectedTextColorRes(R.color.item_name).withSelectedBackgroundAnimated(true).withSubItems(
+                new SecondaryDrawerItem().withIdentifier(1).withName("Meu Perfil"),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(2).withName("Meus pets"),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(3).withName("Favoritos"),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(4).withName("Chat")
+        );
+
+
+        ExpandableDrawerItem item2 = new ExpandableDrawerItem().withName("Atalhos").withIdentifier(998).withSelectable(true).withSelectedTextColorRes(R.color.item_name).withDescriptionTextColorRes(R.color.item_name).withSelectedColorRes(R.color.second_menu_section_header).withSubItems(
+                new SecondaryDrawerItem().withIdentifier(5).withName("Cadastrar um pet").withLevel(2),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(6).withName("Adotar um pet").withLevel(2),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(7).withName("Ajudar um pet").withLevel(2),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(8).withName("Apadrinhar um pet").withLevel(2)
+        );
+
+
+        ExpandableDrawerItem item3 = new ExpandableDrawerItem().withName("Informações").withIdentifier(997).withSelectable(true).withSelectedTextColorRes(R.color.item_name).withDescriptionTextColorRes(R.color.item_name).withSelectedColorRes(R.color.third_menu_section_header).withSubItems(
+                new SecondaryDrawerItem().withIdentifier(9).withName("Dicas").withLevel(2),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(10).withName("Eventos").withLevel(2),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(11).withName("Legislações").withLevel(2),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(12).withName("Termo de adoção").withLevel(2),
+                new DividerDrawerItem(),
+                new SecondaryDrawerItem().withIdentifier(13).withName("Histórias de adoção")
+        );
+
+        ExpandableDrawerItem item4 = new ExpandableDrawerItem().withName("Configurações").withIdentifier(997).withSelectable(true).withSelectedTextColorRes(R.color.item_name).withDescriptionTextColorRes(R.color.item_name).withSelectedColorRes(R.color.fourth_menu_section_header).withSubItems(
+                new SecondaryDrawerItem().withIdentifier(14).withName("Privacidade").withLevel(2)
+        );
+
+        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(15).withName("Sair");
 
 
         //create the drawer and remember the `Drawer` result object
@@ -91,39 +115,10 @@ public class MainActivity extends AppCompatActivity {
                 .withToolbar(myToolbar)
                 .addDrawerItems(
                         item1,
-                        new DividerDrawerItem(),
                         item2,
-                        new DividerDrawerItem(),
                         item3,
-                        new DividerDrawerItem(),
                         item4,
-                        new DividerDrawerItem(),
-                        item5,
-                        item6,
-                        new DividerDrawerItem(),
-                        item7,
-                        new DividerDrawerItem(),
-                        item8,
-                        new DividerDrawerItem(),
-                        item9,
-                        new DividerDrawerItem(),
-                        item10,
-                        item11,
-                        new DividerDrawerItem(),
-                        item12,
-                        new DividerDrawerItem(),
-                        item13,
-                        new DividerDrawerItem(),
-                        item14,
-                        new DividerDrawerItem(),
-                        item15,
-                        new DividerDrawerItem(),
-                        item16,
-                        item17,
-                        new DividerDrawerItem(),
-                        item18,
-                        new DividerDrawerItem()
-
+                        item5
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -143,62 +138,62 @@ public class MainActivity extends AppCompatActivity {
                                 changeFragment(favoritesFragment);
                                 break;
                             case 4:
-                                ChatFragment chatFragment = new ChatFragment();
+                                ChatListFragment chatFragment = new ChatListFragment();
                                 changeFragment(chatFragment);
                                 break;
-                            case 6:
+                            case 5:
                                 RegisterPetFragment registerPetFragment = new RegisterPetFragment();
                                 changeFragment(registerPetFragment);
                                 break;
-                            case 7:
+                            case 6:
                                 AdoptPetFragment adoptPetFragment = new AdoptPetFragment();
                                 changeFragment(adoptPetFragment);
                                 break;
-                            case 8:
+                            case 7:
                                 HelpPetFragment helpPetFragment = new HelpPetFragment();
                                 changeFragment(helpPetFragment);
                                 break;
-                            case 9:
+                            case 8:
                                 ApadrinharPetFragment apadrinharPetFragment = new ApadrinharPetFragment();
                                 changeFragment(apadrinharPetFragment);
                                 break;
 
-                            case 11:
+                            case 9:
                                 TipsFragment tipsFragment = new TipsFragment();
                                 changeFragment(tipsFragment);
                                 break;
 
-                            case 12:
+                            case 10:
                                 EventsFragment eventsFragments = new EventsFragment();
                                 changeFragment(eventsFragments);
                                 break;
 
-                            case 13:
+                            case 11:
                                 LegislationFragment legislationFragment = new LegislationFragment();
                                 changeFragment(legislationFragment);
                                 break;
 
-                            case 14:
+                            case 12:
                                 AdoptionTermsFragment adoptionTermsFragment = new AdoptionTermsFragment();
                                 changeFragment(adoptionTermsFragment);
                                 break;
 
-                            case 15:
+                            case 13:
                                 AdoptionHistoryFragment adoptionHistoryFragment = new AdoptionHistoryFragment();
                                 changeFragment(adoptionHistoryFragment);
                                 break;
 
-                            case 16:
+                            case 14:
                                 ConfigurationsFragment configurationsFragment = new ConfigurationsFragment();
                                 changeFragment(configurationsFragment);
                                 break;
 
-                            case 17:
+                            case 15:
                                 PrivacyFragment privacyFragment = new PrivacyFragment();
                                 changeFragment(privacyFragment);
                                 break;
 
-                            case 18:
+                            case 16:
                                 //quit
                                 break;
 

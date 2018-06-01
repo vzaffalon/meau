@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <EditText
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#bdbdbd"
+        android:backgroundTint="#bdbdbd"
+        android:hint="Nome de usuário"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#bdbdbd"
+        android:backgroundTint="#bdbdbd"
+        android:hint="Senha"/>
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:background="#88c9bf"
+        android:layout_gravity="center"
+        android:text="Entrar"
+        android:textSize="8pt"
+        android:id="@+id/confirm_button"
+        android:fontFamily="Roboto"
+        android:padding="3dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/corLetraButtons" />
+
+    <Button
+        android:layout_marginTop="60dp"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="#194f7c"
+        android:layout_gravity="center"
+        android:text="Entrar com o facebook"
+        android:textSize="8pt"
+        android:id="@+id/facebook_button"
+        android:fontFamily="Roboto"
+        android:padding="3dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="#f15f5c"
+        android:layout_gravity="center"
+        android:text="Entrar com o google"
+        android:textSize="8pt"
+        android:id="@+id/google_button"
+        android:fontFamily="Roboto"
+        android:padding="3dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white" />
+
+</LinearLayout>

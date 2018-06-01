@@ -13,6 +13,13 @@
     <color name="white">#fff</color>
 
 
+    <color name="first_menu_section_header">#fff</color>
+    <color name="second_menu_section_header">#fee29b</color>
+    <color name="third_menu_section_header">#cfe9e5</color>
+    <color name="fourth_menu_section_header">#e6e7e8</color>
+    <color name="item_name">#434343</color>
+
+
 
     <!-- Material DEFAULT colors -->
     <color name="material_drawer_primary">#88c9bf</color>

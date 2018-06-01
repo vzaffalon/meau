@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/ola"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/courgette_regular"
+        android:text="Eba!"
+        android:textColor="@color/amareloApp"
+        android:textSize="30pt"
+        android:layout_marginTop="40dp"
+        />
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="Roboto"
+        android:textAlignment="center"
+        android:text="O cadastro do seu pet foi realizado com sucesso"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/corLetraTextView"
+        android:textSize="9pt"
+        />
+
+    <TextView
+        android:id="@+id/texto2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="Roboto"
+        android:textAlignment="center"
+        android:text="Certifique-se que permitiu o envio de notificações por push no campo privacidade do menu configurações do aplicativo. Assim, poderemos te avisar assim que alguem interessado entrar em contato."
+        android:layout_marginTop="30dp"
+        android:textColor="@color/corLetraTextView"
+        android:textSize="9pt"
+        />
+
+    <Button
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:background="#ffd358"
+        android:layout_gravity="center"
+        android:text="Meus pets"
+        android:textSize="8pt"
+        android:id="@+id/my_pets_button"
+        android:fontFamily="Roboto"
+        android:padding="3dp"
+        android:layout_marginTop="55dp"
+        android:textColor="@color/corLetraButtons" />
+
+
+</LinearLayout>

@@ -27,7 +27,7 @@
             android:layout_height="25dp"
             android:id="@+id/profileNamePic"
             android:textSize="15dp"
-            android:text="vzaffalon"
+            android:text="Victor Zaffalon"
             android:gravity="center"
             android:textColor="@color/corLetraButtons"
             android:layout_marginTop="12dp"
