@@ -5,6 +5,7 @@
     <string name="fraseInicial3">cães e gatos com facilidade.</string>
     <string name="fraseInicial4">Qual seu interesse?</string>
     <string name="ola">Olá!</string>
+    <string name="ops">Ops!</string>
     <string name="login">login</string>
     <string name="adotar">ADOTAR</string>
     <string name="ajudar">AJUDAR</string>
@@ -14,6 +15,7 @@
     <string name="email">EMAIL</string>
     <string name="location">LOCALIZAÇÃO</string>
     <string name="address">ENDEREÇO</string>
+    <string name="history_list">LISTA DE HISTÓRIAS</string>
     <string name="phone">TELEFONE</string>
     <string name="username">NOME DE USUÁRIO</string>
     <string name="history">HISTÓRICO</string>
