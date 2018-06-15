@@ -98,10 +98,10 @@ public class MainActivity extends AppCompatActivity {
                 new DividerDrawerItem(),
                 new SecondaryDrawerItem().withIdentifier(12).withName("Termo de adoção").withLevel(2),
                 new DividerDrawerItem(),
-                new SecondaryDrawerItem().withIdentifier(13).withName("Histórias de adoção")
+                new SecondaryDrawerItem().withIdentifier(13).withName("Histórias de adoção").withLevel(2)
         );
 
-        ExpandableDrawerItem item4 = new ExpandableDrawerItem().withName("Configurações").withIdentifier(997).withSelectable(true).withSelectedTextColorRes(R.color.item_name).withDescriptionTextColorRes(R.color.item_name).withSelectedColorRes(R.color.fourth_menu_section_header).withSubItems(
+        ExpandableDrawerItem item4 = new ExpandableDrawerItem().withName("Configurações").withIdentifier(1001).withSelectable(true).withSelectedTextColorRes(R.color.item_name).withDescriptionTextColorRes(R.color.item_name).withSelectedColorRes(R.color.fourth_menu_section_header).withSubItems(
                 new SecondaryDrawerItem().withIdentifier(14).withName("Privacidade").withLevel(2)
         );
 
@@ -184,17 +184,13 @@ public class MainActivity extends AppCompatActivity {
                                 break;
 
                             case 14:
-                                ConfigurationsFragment configurationsFragment = new ConfigurationsFragment();
-                                changeFragment(configurationsFragment);
-                                break;
-
-                            case 15:
                                 PrivacyFragment privacyFragment = new PrivacyFragment();
                                 changeFragment(privacyFragment);
                                 break;
 
-                            case 16:
-                                //quit
+                            case 15:
+                                IntroductionFragment introductionFragment = new IntroductionFragment();
+                                changeFragment(introductionFragment);
                                 break;
 
                         }

@@ -19,8 +19,7 @@ public class TipInfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.introduction_fragment, container, false);
-        Button login_button = (Button) view.findViewById(R.id.buttonLogin);
+        View view = inflater.inflate(R.layout.tip_info_fragment, container, false);
 
         return view;
     }

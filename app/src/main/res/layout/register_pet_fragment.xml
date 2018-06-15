@@ -135,7 +135,7 @@
             android:text="Cachorro"
             android:buttonTint="#757575"
             android:textColor="@color/md_black_1000"
-            android:onClick="onRadioButtonClicked"/>
+            />
         <RadioButton android:id="@+id/radio_gato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
             android:layout_marginLeft="5dp"
             android:buttonTint="#757575"
             android:textColor="@color/md_black_1000"
-            android:onClick="onRadioButtonClicked"/>
+           />
     </RadioGroup>
 
     <TextView
@@ -163,7 +163,7 @@
             android:textColor="@color/md_black_1000"
             android:text="Macho"
             android:buttonTint="#757575"
-            android:onClick="onRadioButtonClicked"/>
+           />
         <RadioButton android:id="@+id/radio_femea"
             android:layout_width="wrap_content"
             android:textColor="@color/md_black_1000"
@@ -171,7 +171,7 @@
             android:text="Fêmea"
             android:layout_marginLeft="5dp"
             android:buttonTint="#757575"
-            android:onClick="onRadioButtonClicked"/>
+            />
     </RadioGroup>
 
     <TextView
@@ -192,7 +192,7 @@
             android:textColor="@color/md_black_1000"
             android:text="Pequeno"
             android:buttonTint="#757575"
-            android:onClick="onRadioButtonClicked"/>
+           />
         <RadioButton android:id="@+id/radio_medio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -200,7 +200,7 @@
             android:text="Medio"
             android:layout_marginLeft="5dp"
             android:buttonTint="#757575"
-            android:onClick="onRadioButtonClicked"/>
+           />
         <RadioButton android:id="@+id/radio_grande"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -208,7 +208,7 @@
             android:text="Grande"
             android:layout_marginLeft="5dp"
             android:buttonTint="#757575"
-            android:onClick="onRadioButtonClicked"/>
+            />
     </RadioGroup>
 
     <TextView
@@ -229,7 +229,7 @@
             android:text="Filhote"
             android:buttonTint="#757575"
             android:textColor="@color/md_black_1000"
-            android:onClick="onRadioButtonClicked"/>
+            />
         <RadioButton android:id="@+id/radio_adulto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
             android:text="Adulto"
             android:layout_marginLeft="5dp"
             android:buttonTint="#757575"
-            android:onClick="onRadioButtonClicked"/>
+            />
         <RadioButton android:id="@+id/radio_idoso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -245,7 +245,7 @@
             android:text="Idoso"
             android:layout_marginLeft="5dp"
             android:buttonTint="#757575"
-            android:onClick="onRadioButtonClicked"/>
+           />
     </RadioGroup>
 
     <TextView
@@ -266,14 +266,14 @@
             android:textColor="@color/md_black_1000"
             android:text="Brincalhão"
             android:buttonTint="#757575"
-            android:onClick="onCheckboxClicked"/>
+            />
         <CheckBox android:id="@+id/checkbox_timido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tímido"
             android:buttonTint="#757575"
             android:textColor="@color/md_black_1000"
-            android:onClick="onCheckboxClicked"/>
+           />
         <CheckBox android:id="@+id/checkbox_calmo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -281,7 +281,7 @@
             android:layout_marginLeft="5dp"
             android:buttonTint="#757575"
             android:textColor="@color/md_black_1000"
-            android:onClick="onCheckboxClicked"/>
+            />
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -294,7 +294,7 @@
             android:textColor="@color/md_black_1000"
             android:text="Guarda"
             android:buttonTint="#757575"
-            android:onClick="onCheckboxClicked"/>
+            />
         <CheckBox android:id="@+id/checkbox_amoroso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -302,7 +302,7 @@
             android:buttonTint="#757575"
             android:layout_marginLeft="5dp"
             android:textColor="@color/md_black_1000"
-            android:onClick="onCheckboxClicked"/>
+           />
         <CheckBox android:id="@+id/checkbox_preguicoso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -310,7 +310,7 @@
             android:buttonTint="#757575"
             android:layout_marginLeft="5dp"
             android:textColor="@color/md_black_1000"
-            android:onClick="onCheckboxClicked"/>
+            />
     </LinearLayout>
 
 
@@ -332,7 +332,7 @@
             android:textColor="@color/md_black_1000"
             android:text="Vacinado"
             android:buttonTint="#757575"
-            android:onClick="onCheckboxClicked"/>
+           />
         <CheckBox android:id="@+id/checkbox_vermifugado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -340,7 +340,7 @@
             android:buttonTint="#757575"
             android:layout_marginLeft="5dp"
             android:textColor="@color/md_black_1000"
-            android:onClick="onCheckboxClicked"/>
+            />
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -353,7 +353,7 @@
             android:textColor="@color/md_black_1000"
             android:text="Catrado"
             android:buttonTint="#757575"
-            android:onClick="onCheckboxClicked"/>
+           />
         <CheckBox android:id="@+id/checkbox_cheese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -361,7 +361,7 @@
             android:buttonTint="#757575"
             android:layout_marginLeft="5dp"
             android:textColor="@color/md_black_1000"
-            android:onClick="onCheckboxClicked"/>
+            />
     </LinearLayout>
 
     <EditText
@@ -390,28 +390,28 @@
             android:textColor="@color/md_black_1000"
             android:text="Termo de adoção"
             android:buttonTint="#757575"
-            android:onClick="onCheckboxClicked"/>
+            />
         <CheckBox android:id="@+id/checkbox_fotos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fotos da casa"
             android:buttonTint="#757575"
             android:textColor="@color/md_black_1000"
-            android:onClick="onCheckboxClicked"/>
+            />
         <CheckBox android:id="@+id/checkbox_visita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#757575"
             android:text="Visita previa do animal"
             android:textColor="@color/md_black_1000"
-            android:onClick="onCheckboxClicked"/>
+           />
         <CheckBox android:id="@+id/checkbox_acompanhamento"
             android:layout_width="wrap_content"
             android:buttonTint="#757575"
             android:layout_height="wrap_content"
             android:text="Acompanhamento pós adoção"
             android:textColor="@color/md_black_1000"
-            android:onClick="onCheckboxClicked"/>
+           />
     </LinearLayout>
 
     <TextView

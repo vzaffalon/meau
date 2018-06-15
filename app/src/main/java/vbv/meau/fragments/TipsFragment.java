@@ -46,6 +46,10 @@ public class TipsFragment extends Fragment {
             tips.add(tip);
             tip = new Tip("Saúde");
             tips.add(tip);
+            tip = new Tip("Economias");
+            tips.add(tip);
+            tip = new Tip("Processo de adoção");
+            tips.add(tip);
         }
 
         if(recyclerView.getAdapter() == null){

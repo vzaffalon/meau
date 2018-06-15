@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backGroundApp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cortandounha"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Como cortar as unhas do seu cachorro"
+        android:textColor="#434343"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Se engana quem pensa que a manutenção em
+dia das unhas do cachorro é apenas por
+aparência. Na verdade, é um cuidado básico de
+saúde, já que, quando as unhas estão muito
+grandes, além de causar desconforto no animal
+quando ele se locomove, elas podem quebrar,
+deixando o pet aberto a uma infecção; ou
+envergar, influenciando em sua postura ou até
+mesmo perfurando a carne.
+Geralmente, pets que não passeiam muito, pets
+idosos, ou que têm mais contato com superfícies
+lisas (como os que moram em apartamento),
+precisam que suas unhas sejam cortadas mais
+vezes. No caso de animais mais ativos, as unhas
+são naturalmente reduzidas com o exercício.
+Separamos informações e o passo a passo para
+tutores que desejam aprender a cortar a unha de
+seus cães em casa, sem depender sempre
+exclusivamente de groomers e médicos
+veterinários. Além disso, há dicas para tornar o
+momento menos estressante, para humano e cachorros"
+        android:textColor="#757575"
+        android:textSize="16dp"
+        android:padding="15dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_horizontal"/>
+
+</LinearLayout>
+</ScrollView>
