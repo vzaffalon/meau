@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backGroundApp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="O termo de adoção é um termo que oficializa o processo de adoção de um animal. Similarmente funciona o termo de apadrinhamento.\n\n
+É importante que o doador/dono exija a assinatura deste termo por parte do adotante/padrinho, de forma a ter prova legal de que a pessoa adquiriu o animal. Assim, podem ser tomadas providências legais em caso de maus tratos ou negligência ao animal. \n\n
+Para facilitar o processo, o Meau disponibiliza o termo aos seus doadores e donos de animais que utilizam o aplicativo para encontrar um destino e/ou ajuda para seu bichinho. Este termo é enviado por e-mail para que possa ser feita a impressão e, no momento de entrega do animal (ou quando o padrinho vai conhecê-lo), seja feita a assinatura por parte do adotante/padrinho. \n\n
+Pressionando os botões abaixo, você receberá em seu email o termo em questão, nos formatos .doc (word) e .pdf."
+        android:textSize="19sp"
+        android:padding="20dp"
+        android:textColor="#757575"/>
+
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:background="#88c9bf"
+        android:layout_gravity="center"
+        android:text="Termo de adoção"
+        android:textSize="8pt"
+        android:fontFamily="Roboto"
+        android:padding="3dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/corLetraButtons" />
+
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:background="#88c9bf"
+        android:layout_gravity="center"
+        android:text="Termo de apadrinhamento"
+        android:textSize="8pt"
+        android:fontFamily="Roboto"
+        android:padding="3dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/corLetraButtons" />
+
+</LinearLayout>

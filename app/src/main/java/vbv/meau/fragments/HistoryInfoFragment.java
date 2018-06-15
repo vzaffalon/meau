@@ -9,16 +9,15 @@ import android.view.ViewGroup;
 import vbv.meau.R;
 
 /**
- * Created by vzaffalon on 04/05/2018.
+ * Created by vzaffalon on 15/06/2018.
  */
 
-public class AdoptionTermsFragment extends Fragment {
+public class HistoryInfoFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.adoption_term_fragment, container, false);
-
+        View view = inflater.inflate(R.layout.history_info_fragment, container, false);
         return view;
     }
 }

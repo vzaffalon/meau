@@ -10,7 +10,7 @@
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:orientation="horizontal"
-    android:padding="10dp">
+    android:padding="15dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -36,13 +36,15 @@
             android:layout_width="wrap_content"
             android:id="@+id/name_text_view"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:text="Victor Zaffalon | Luke"
             android:textColor="#589b9b"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gostei muito do cachorro teria como eu visitalo essa semana..."
+            android:textSize="16sp"
+            android:text="Gostei muito do cachorro teria como eu visita-lo essa semana..."
             android:textColor="#757575"/>
 
 
