@@ -9,6 +9,7 @@
     <color name="azulApp">#88c9bf</color>
     <color name="corLetraButtons">#434343</color>
     <color name="corLetraTextView">#757575</color>
+    <color name="corInputText">#bdbdbd</color>
     <color name="backGroundApp">#fafafa</color>
     <color name="white">#fff</color>
 

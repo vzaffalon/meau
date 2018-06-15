@@ -36,6 +36,7 @@ import vbv.meau.fragments.MyPerfilFragment;
 import vbv.meau.fragments.MyPetsFragment;
 import vbv.meau.fragments.PrivacyFragment;
 import vbv.meau.fragments.RegisterPetFragment;
+import vbv.meau.fragments.RegisterUserFragment;
 import vbv.meau.fragments.TipsFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -191,6 +192,10 @@ public class MainActivity extends AppCompatActivity {
                             case 15:
                                 IntroductionFragment introductionFragment = new IntroductionFragment();
                                 changeFragment(introductionFragment);
+                                break;
+                            case 16:
+                                RegisterUserFragment registerUserFragment = new RegisterUserFragment();
+                                changeFragment(registerUserFragment);
                                 break;
 
                         }

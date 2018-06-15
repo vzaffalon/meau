@@ -1,7 +1,7 @@
 package vbv.meau.fragments;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,20 +10,15 @@ import android.widget.Button;
 
 import vbv.meau.R;
 
-/**
- * Created by vzaffalon on 31/05/2018.
- */
-
-public class LoginFragment extends Fragment {
-
+public class RegisterUserFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.login_fragment, container, false);
-        Button confirm_button = (Button) view.findViewById(R.id.confirm_button);
+        View view = inflater.inflate(R.layout.user_register_fragment, container, false);
+        Button registerButton = (Button) view.findViewById(R.id.buttonRegister);
 
-        confirm_button.setOnClickListener(new View.OnClickListener() {
+        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new RegisterUserFragment();
@@ -31,7 +26,8 @@ public class LoginFragment extends Fragment {
 
             }
         });
-
+        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment
         return view;
     }
 

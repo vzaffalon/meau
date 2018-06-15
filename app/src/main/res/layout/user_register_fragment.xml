@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/backGroundApp">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:id="@+id/infoRect"
+            android:src="@drawable/info_rect_register"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:text="INFORMAÇÕES PESSOAIS"
+            android:textColor="@color/azulApp"
+            android:id="@+id/infoHeader"
+            android:textSize="17dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoRect"/>
+        
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputName"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="Nome completo"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/infoHeader"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputAge"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="Idade"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/inputName"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputEmail"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="E-mail"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/inputAge"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputState"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="Estado"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/inputEmail"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputCity"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="Cidade"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/inputState"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputAddress"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="Endereço"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/inputCity"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputPhone"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="Telefone"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/inputAddress"
+            />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:text="INFORMAÇÕES DE PERFIL"
+            android:textColor="@color/azulApp"
+            android:id="@+id/userHeader"
+            android:textSize="17dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputPhone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputUserName"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="Nome de Usuário"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/userHeader"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputPassword"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:password="true"
+            android:layout_marginRight="16dp"
+            android:hint="Senha"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/inputUserName"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/inputConfPassword"
+            android:textSize="20dp"
+            android:backgroundTint="@color/corInputText"
+            android:textColor="@color/corLetraTextView"
+            android:textColorHint="@color/corInputText"
+            android:password="true"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="Confirmação de senha"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/inputPassword"
+            />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:text="FOTO DE PERFIL"
+            android:textColor="@color/azulApp"
+            android:id="@+id/photoHeader"
+            android:textSize="17dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputConfPassword"/>
+        
+        <ImageButton
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:id="@+id/buttonPhoto"
+            android:src="@drawable/button_add_image"
+            android:layout_marginTop="32dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photoHeader"/>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@color/azulApp"
+            android:id="@+id/buttonRegister"
+            android:text="FAZER CADASTRO"
+            android:textSize="8pt"
+            android:fontFamily="Roboto"
+            android:textColor="@color/corLetraButtons"
+            app:layout_constraintTop_toBottomOf="@id/buttonPhoto"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+
