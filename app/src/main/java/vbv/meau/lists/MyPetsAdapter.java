@@ -43,7 +43,7 @@ public class MyPetsAdapter extends RecyclerView.Adapter<MyPetsAdapter.ViewHolder
     @Override
     public void onBindViewHolder(final ViewHolder holder,final int position) {
         Pet pet = pets.get(position);
-        holder.name.setText(pet.getName());
+        holder.name.setText(pet.getNome());
 
         //button click
         if(onItemClickListener != null){

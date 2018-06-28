@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import vbv.meau.R;
@@ -40,17 +41,10 @@ public class EventsFragment extends Fragment {
 
         if(events == null){
             events = new ArrayList<>();
-            Event event = new Event("Feira de adoção de cães e gatos");
+            Event event = new Event("Feira de adoção de cães e gatos",new Date(),"Brasilia - df","feira de adocoes de teste");
             events.add(event);
-            event = new Event("Feira de adoção da torre");
+            event = new Event("Feira de adoção de cães e gatos",new Date(),"Brasilia - df","feira de adocoes de teste");
             events.add(event);
-            event = new Event("Arrecadação no parque");
-            events.add(event);
-            event = new Event("Corrida de cães e gatos");
-            events.add(event);
-            event = new Event("Feira de adoção do sudoeste");
-            events.add(event);
-
         }
 
         if(recyclerView.getAdapter() == null){

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import vbv.meau.R;
+import vbv.meau.models.Chat;
 import vbv.meau.models.Pet;
 import vbv.meau.models.User;
 
@@ -22,13 +23,13 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
     private final Context context;
 
-    private List<User> users;
+    private List<Chat> chats;
 
     private ChatListAdapter.OnItemClickListener onItemClickListener;
 
-    public ChatListAdapter(Context context, List<User> users, OnItemClickListener onItemClickListener){
+    public ChatListAdapter(Context context, List<Chat> chats, OnItemClickListener onItemClickListener){
         this.context=context;
-        this.users = users;
+        this.chats = chats;
         this.onItemClickListener = onItemClickListener;
     }
 
@@ -42,8 +43,8 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(final ViewHolder holder,final int position) {
-        User user = users.get(position);
-        holder.name.setText(user.getName());
+        Chat chat = chats.get(position);
+        holder.name.setText(chat.getNome());
 
         //button click
         if(onItemClickListener != null){
@@ -58,7 +59,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return this.users != null ? this.users.size() : 0;
+        return this.chats != null ? this.chats.size() : 0;
     }
 
     //viewholder com as views

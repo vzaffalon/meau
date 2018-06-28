@@ -43,7 +43,7 @@ public class TipsAdapter  extends RecyclerView.Adapter<TipsAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(final TipsAdapter.ViewHolder holder, final int position) {
         Tip tip = tips.get(position);
-        holder.name.setText(tip.getName());
+        holder.name.setText(tip.getCategoria());
 
         //button click
         if(onItemClickListener != null){

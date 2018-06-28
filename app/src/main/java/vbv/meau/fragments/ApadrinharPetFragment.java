@@ -36,15 +36,15 @@ public class ApadrinharPetFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
 
         if(pets == null){
-            pets = new ArrayList<>();
-            Pet pet = new Pet("Luke");
-            pets.add(pet);
-            pet = new Pet("Fear");
-            pets.add(pet);
-            pet = new Pet("Lionel");
-            pets.add(pet);
-            pet = new Pet("Bingo");
-            pets.add(pet);
+//            pets = new ArrayList<>();
+//            Pet pet = new Pet("Luke");
+//            pets.add(pet);
+//            pet = new Pet("Fear");
+//            pets.add(pet);
+//            pet = new Pet("Lionel");
+//            pets.add(pet);
+//            pet = new Pet("Bingo");
+//            pets.add(pet);
         }
 
         if(recyclerView.getAdapter() == null){

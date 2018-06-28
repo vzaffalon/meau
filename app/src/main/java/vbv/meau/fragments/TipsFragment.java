@@ -16,6 +16,7 @@ import vbv.meau.R;
 import vbv.meau.lists.ChatListAdapter;
 import vbv.meau.lists.TipsAdapter;
 import vbv.meau.models.Tip;
+import vbv.meau.models.TipInfo;
 import vbv.meau.models.User;
 
 /**
@@ -40,15 +41,14 @@ public class TipsFragment extends Fragment {
 
         if(tips == null){
             tips = new ArrayList<>();
-            Tip tip = new Tip("Comportamento");
-            tips.add(tip);
-            tip = new Tip("Alimentação");
-            tips.add(tip);
-            tip = new Tip("Saúde");
-            tips.add(tip);
-            tip = new Tip("Economias");
-            tips.add(tip);
-            tip = new Tip("Processo de adoção");
+            ArrayList<TipInfo> tipInfos = new ArrayList<>();
+            TipInfo tipInfo = new TipInfo("","Titulo","descricao");
+            tipInfos.add(tipInfo);
+            tipInfo = new TipInfo("","Titulo","descricao");
+            tipInfos.add(tipInfo);
+            tipInfo = new TipInfo("","Titulo","descricao");
+            tipInfos.add(tipInfo);
+            Tip tip = new Tip("Comportamento",tipInfos);
             tips.add(tip);
         }
 

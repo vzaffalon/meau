@@ -1,21 +1,33 @@
 package vbv.meau.models;
 
+import java.util.ArrayList;
+
 /**
  * Created by vzaffalon on 01/06/2018.
  */
 
 public class Tip {
-    private String name;
+    private String categoria;
+    private ArrayList<TipInfo> tipInfo;
 
-    public Tip(String name) {
-        this.name = name;
+    public Tip(String categoria, ArrayList<TipInfo> tipInfo) {
+        this.categoria = categoria;
+        this.tipInfo = tipInfo;
     }
 
-    public String getName() {
-        return name;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public ArrayList<TipInfo> getTipInfo() {
+        return tipInfo;
+    }
+
+    public void setTipInfo(ArrayList<TipInfo> tipInfo) {
+        this.tipInfo = tipInfo;
     }
 }

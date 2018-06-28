@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -19,6 +20,8 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
+
+import java.io.IOException;
 
 import vbv.meau.fragments.AdoptPetFragment;
 import vbv.meau.fragments.AdoptionHistoryFragment;
@@ -45,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        startFirestore();
 
         createFirstFragment();
 
@@ -205,6 +211,11 @@ public class MainActivity extends AppCompatActivity {
                 .withCloseOnClick(true)
                 .build();
 
+
+    }
+
+
+    private void startFirestore(){
 
     }
 

@@ -44,7 +44,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(final ViewHolder holder,final int position) {
         Event event = events.get(position);
-        holder.name.setText(event.getName());
+        holder.name.setText(event.getNome());
 
         //button click
         if(onItemClickListener != null){

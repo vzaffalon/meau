@@ -41,15 +41,15 @@ public class AdoptionHistoryFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
 
         if(pets == null){
-            pets = new ArrayList<>();
-            Pet pet = new Pet("Pequi");
-            pets.add(pet);
-            pet = new Pet("Luke");
-            pets.add(pet);
-            pet = new Pet("Harry");
-            pets.add(pet);
-            pet = new Pet("Sumail");
-            pets.add(pet);
+//            pets = new ArrayList<>();
+//            Pet pet = new Pet("Pequi");
+//            pets.add(pet);
+//            pet = new Pet("Luke");
+//            pets.add(pet);
+//            pet = new Pet("Harry");
+//            pets.add(pet);
+//            pet = new Pet("Sumail");
+//            pets.add(pet);
         }
 
         if(recyclerView.getAdapter() == null){

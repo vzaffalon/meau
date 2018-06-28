@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -9,7 +9,14 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
+        multiDexEnabled true
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,7 +33,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    compile 'com.google.firebase:firebase-core:15.0.0'
+    compile 'com.google.firebase:firebase-core:16.0.1'
     implementation('com.mikepenz:materialdrawer:6.0.7@aar') {
         transitive = true
     }
@@ -37,5 +44,3 @@ dependencies {
     implementation 'com.android.support:design:26.1.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 }
-
-apply plugin: 'com.google.gms.google-services'

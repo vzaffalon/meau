@@ -39,14 +39,14 @@ public class AdoptPetFragment extends Fragment {
 
         if(pets == null){
             pets = new ArrayList<>();
-            Pet pet = new Pet("Pequi");
-            pets.add(pet);
-            pet = new Pet("Luke");
-            pets.add(pet);
-            pet = new Pet("Harry");
-            pets.add(pet);
-            pet = new Pet("Sumail");
-            pets.add(pet);
+//            Pet pet = new Pet("Pequi");
+//            pets.add(pet);
+//            pet = new Pet("Luke");
+//            pets.add(pet);
+//            pet = new Pet("Harry");
+//            pets.add(pet);
+//            pet = new Pet("Sumail");
+//            pets.add(pet);
         }
 
         if(recyclerView.getAdapter() == null){

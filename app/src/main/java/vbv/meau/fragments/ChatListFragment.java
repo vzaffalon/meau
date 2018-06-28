@@ -15,6 +15,7 @@ import java.util.List;
 import vbv.meau.R;
 import vbv.meau.lists.AdoptAdapter;
 import vbv.meau.lists.ChatListAdapter;
+import vbv.meau.models.Chat;
 import vbv.meau.models.Pet;
 import vbv.meau.models.User;
 
@@ -23,7 +24,7 @@ import vbv.meau.models.User;
  */
 
 public class ChatListFragment extends Fragment {
-    private List<User> users;
+    private List<Chat> chats;
     protected RecyclerView recyclerView;
     private LinearLayoutManager mLayoutManager;
     private ChatListAdapter chatListAdapter;
@@ -37,24 +38,14 @@ public class ChatListFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(mLayoutManager);
 
-        if(users == null){
-            users = new ArrayList<>();
-            User user = new User("Victor Zaffalon");
-            users.add(user);
-            user = new User("Bruno Bergamaschi");
-            users.add(user);
-            user = new User("Victor Araujo");
-            users.add(user);
-            user = new User("Pedro Alberto");
-            users.add(user);
-            user = new User("Jose Araujo");
-            users.add(user);
-            user = new User("Dudu Nobre");
-            users.add(user);
+        if(chats == null){
+            chats = new ArrayList<>();
+            Chat chat = new Chat("Victor Zaffalon","Estou aguardando contato");
+            chats.add(chat);
         }
 
         if(recyclerView.getAdapter() == null){
-            chatListAdapter = new ChatListAdapter(getContext(), users,onItemClickListener());
+            chatListAdapter = new ChatListAdapter(getContext(), chats,onItemClickListener());
             recyclerView.setAdapter(chatListAdapter);
         }
         recyclerView.getAdapter().notifyDataSetChanged();
