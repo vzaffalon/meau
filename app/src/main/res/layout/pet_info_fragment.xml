@@ -24,6 +24,7 @@
         android:padding="5dp">
 
         <TextView
+            android:id="@+id/nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="19dp"
@@ -32,6 +33,7 @@
 
 
         <TextView
+            android:id="@+id/tipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14dp"
@@ -59,6 +61,7 @@
 
 
                 <TextView
+                    android:id="@+id/sexo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
@@ -82,6 +85,7 @@
 
 
                 <TextView
+                    android:id="@+id/porte"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
@@ -106,6 +110,7 @@
 
 
                 <TextView
+                    android:id="@+id/idade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
@@ -131,6 +136,7 @@
 
 
             <TextView
+                android:id="@+id/localizacao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
@@ -165,6 +171,7 @@
 
 
                 <TextView
+                    android:id="@+id/castrado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
@@ -188,6 +195,7 @@
 
 
                 <TextView
+                    android:id="@+id/vermifugado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
@@ -217,6 +225,7 @@
 
 
                 <TextView
+                    android:id="@+id/vacinado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
@@ -240,6 +249,7 @@
 
 
                 <TextView
+                    android:id="@+id/doencas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
@@ -271,6 +281,7 @@
 
 
             <TextView
+                android:id="@+id/temperamento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
@@ -304,6 +315,7 @@
 
 
             <TextView
+                android:id="@+id/necessidades_animal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
@@ -336,6 +348,7 @@
 
 
             <TextView
+                android:id="@+id/exigencias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
@@ -368,6 +381,7 @@
 
 
             <TextView
+                android:id="@+id/sobre_o_animal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"

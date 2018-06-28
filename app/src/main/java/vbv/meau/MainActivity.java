@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -22,6 +24,8 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 
 import vbv.meau.fragments.AdoptPetFragment;
 import vbv.meau.fragments.AdoptionHistoryFragment;
@@ -30,6 +34,7 @@ import vbv.meau.fragments.ApadrinharPetFragment;
 import vbv.meau.fragments.ChatFragment;
 import vbv.meau.fragments.ChatListFragment;
 import vbv.meau.fragments.ConfigurationsFragment;
+import vbv.meau.fragments.ConfirmedPetRegistrationFragment;
 import vbv.meau.fragments.EventsFragment;
 import vbv.meau.fragments.FavoritesFragment;
 import vbv.meau.fragments.HelpPetFragment;
@@ -41,6 +46,12 @@ import vbv.meau.fragments.PrivacyFragment;
 import vbv.meau.fragments.RegisterPetFragment;
 import vbv.meau.fragments.RegisterUserFragment;
 import vbv.meau.fragments.TipsFragment;
+import vbv.meau.models.Chat;
+import vbv.meau.models.Event;
+import vbv.meau.models.Pet;
+import vbv.meau.models.Tip;
+import vbv.meau.models.TipInfo;
+import vbv.meau.models.User;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        startFirestore();
+        startFirebase();
 
         createFirstFragment();
 
@@ -215,7 +226,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void startFirestore(){
+    private void startFirebase(){
+        FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = mDatabase.getReference();
+
+        Event event = new Event("Feira de adoção do guara", new Date(),"Guara 2","A feira ocorrera para arrecadar fundo para...");
+        myRef.child("events").push().setValue(event);
+
+
+        User user = new User("Victor Zaffalon","22","zaffalonvictor@gmail.com","DF",
+                "brasilia","SQSW 202","6199923333","vzaffalon","123456","teste","teste_id");
+        myRef.child("users").push().setValue(user);
+
+        Chat chat = new Chat("Victor Zaffalon","teste chat");
+        myRef.child("chats").push().setValue(chat);
+
+        TipInfo tipInfo = new TipInfo("imagem_a","Como cuidar da unha do seu cão","para cuida da unha do seu cao...");
+        ArrayList<TipInfo> tipInfos = new ArrayList<>();
+        tipInfos.add(tipInfo);
+        Tip tip = new Tip("Saude",tipInfos);
+        myRef.child("tips").push().setValue(chat);
 
     }
 

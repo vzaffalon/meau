@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#f1f2f2"
-            android:id="@+id/butotonHelp"
+            android:id="@+id/buttonAjuda"
             android:text="Ajuda"
             android:layout_marginLeft="10dp"
             android:padding="3dp"
@@ -90,8 +90,10 @@
         android:textColor="#f7a800"/>
     
     <EditText
+        android:id="@+id/nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:textColorHint="#bdbdbd"
         android:backgroundTint="#bdbdbd"
         android:hint="Nome do animal"/>
@@ -105,6 +107,7 @@
         android:textColor="#f7a800"/>
 
     <RelativeLayout
+        android:id="@+id/addPicture"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:gravity="center"
@@ -223,7 +226,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <RadioButton android:id="@+id/radio_filhoto"
+        <RadioButton android:id="@+id/radio_filhote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Filhote"
@@ -347,14 +350,14 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-        <CheckBox android:id="@+id/checkbox_meat"
+        <CheckBox android:id="@+id/checkbox_castrado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/md_black_1000"
-            android:text="Catrado"
+            android:text="Castrado"
             android:buttonTint="#757575"
            />
-        <CheckBox android:id="@+id/checkbox_cheese"
+        <CheckBox android:id="@+id/checkbox_doente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Doente"
@@ -422,11 +425,13 @@
         android:textColor="#f7a800"/>
 
     <EditText
+        android:id="@+id/sobre_o_animal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:textColorHint="#bdbdbd"
         android:backgroundTint="#bdbdbd"
-        android:hint="Nome do animal"/>
+        android:hint="Sobre o animal"/>
 
     <Button
         android:layout_marginTop="8dp"
