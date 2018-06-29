@@ -78,7 +78,8 @@ public class RegisterPetFragment extends Fragment {
         urls.add("http://lupusalimentos.com.br/system/wp-content/uploads/2016/10/Por-que-os-cachorros-t%C3%AAm-a-l%C3%ADngua-azulLupusAlimentos.jpg");
         urls.add("https://tudoela.com/wp-content/uploads/2016/07/Sonhar-com-cachorro.jpg");
         urls.add("http://cachorrosfofos.com.br/wp-content/uploads/2017/09/raca-de-cachorro-grande-Labrador-retriever-01-638x368.jpg");
-        urls.add("https://cdn.vidanimal.com.br/wp-content/uploads/racas-famosas-cachorro-terapia.jpg");
+        urls.add("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbgpC_dNdyrCk8qN7ScEpEuGrAwIG4kymRr9LKEH2jl_u_HWE");
+        urls.add("https://abrilsaude.files.wordpress.com/2017/10/cachorro-alzheimer.png");
         confirm_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
