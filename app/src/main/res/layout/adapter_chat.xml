@@ -14,7 +14,7 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
+        android:id="@+id/foto"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:paddingTop="4dp"
@@ -34,13 +34,14 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:id="@+id/name_text_view"
+            android:id="@+id/titulo"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:text="Victor Zaffalon | Luke"
             android:textColor="#589b9b"/>
 
         <TextView
+            android:id="@+id/descricao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"

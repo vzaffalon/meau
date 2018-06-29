@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 import vbv.meau.R;
@@ -44,7 +46,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(final ViewHolder holder,final int position) {
         Event event = events.get(position);
-        holder.name.setText(event.getNome());
+        holder.nome.setText(event.getNome());
+        holder.data.setText(event.getData());
+        holder.informacoes.setText(event.getInformacoes());
+        holder.local.setText(event.getLocal());
 
         //button click
         if(onItemClickListener != null){
@@ -65,12 +70,19 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     //viewholder com as views
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView name;
+        public TextView data;
         public LinearLayout adapter_layout;
+        private TextView local;
+        private TextView informacoes;
+        public TextView nome;
 
         public ViewHolder(View view){
             super(view);
-            name = (TextView) view.findViewById(R.id.name_text_view);
+            data = (TextView) view.findViewById(R.id.data);
+            local = (TextView) view.findViewById(R.id.local);
+            informacoes = (TextView) view.findViewById(R.id.informacoes);
+            nome = (TextView) view.findViewById(R.id.nome);
+
             adapter_layout = (LinearLayout) view.findViewById(R.id.adapter_event);
         }
     }

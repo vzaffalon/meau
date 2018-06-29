@@ -8,8 +8,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import vbv.meau.R;
 import vbv.meau.models.Chat;
 import vbv.meau.models.Pet;
@@ -45,6 +48,8 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     public void onBindViewHolder(final ViewHolder holder,final int position) {
         Chat chat = chats.get(position);
         holder.name.setText(chat.getNome());
+        Picasso.get().load(chat.getFoto()).into(holder.foto);
+        holder.descricao.setText(chat.getDescricao());
 
         //button click
         if(onItemClickListener != null){
@@ -67,11 +72,16 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView name;
         public LinearLayout adapter_layout;
+        public CircleImageView foto;
+        public TextView descricao;
 
         public ViewHolder(View view){
             super(view);
-            name = (TextView) view.findViewById(R.id.name_text_view);
+            name = (TextView) view.findViewById(R.id.nome);
             adapter_layout = (LinearLayout) view.findViewById(R.id.adapter_chat);
+            foto = (CircleImageView) view.findViewById(R.id.foto);
+            descricao = (TextView) view.findViewById(R.id.descricao);
+
         }
     }
 

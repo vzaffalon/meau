@@ -30,6 +30,36 @@ public class IntroductionFragment extends Fragment {
 
             }
         });
+
+        Button button_adotar = (Button) view.findViewById(R.id.buttonAdotar);
+        Button cadastrar_animal = (Button) view.findViewById(R.id.buttonCadastrarAnimal);
+        Button button_ajudar = (Button) view.findViewById(R.id.buttonAjudar);
+
+
+        button_adotar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new AdoptPetFragment();
+                changeFragment(fragment);
+            }
+        });
+
+        cadastrar_animal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new RegisterPetFragment();
+                changeFragment(fragment);
+            }
+        });
+
+        button_ajudar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new ApadrinharPetFragment();
+                changeFragment(fragment);
+            }
+        });
+
         // Inflate the layout for this fragment
         return view;
     }

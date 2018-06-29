@@ -1,6 +1,7 @@
 package vbv.meau.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,12 +10,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import vbv.meau.R;
 import vbv.meau.lists.ChatListAdapter;
 import vbv.meau.lists.TipsAdapter;
+import vbv.meau.models.Event;
 import vbv.meau.models.Tip;
 import vbv.meau.models.TipInfo;
 import vbv.meau.models.User;
@@ -41,15 +50,15 @@ public class TipsFragment extends Fragment {
 
         if(tips == null){
             tips = new ArrayList<>();
-            ArrayList<TipInfo> tipInfos = new ArrayList<>();
-            TipInfo tipInfo = new TipInfo("","Titulo","descricao");
-            tipInfos.add(tipInfo);
-            tipInfo = new TipInfo("","Titulo","descricao");
-            tipInfos.add(tipInfo);
-            tipInfo = new TipInfo("","Titulo","descricao");
-            tipInfos.add(tipInfo);
-            Tip tip = new Tip("Comportamento",tipInfos);
-            tips.add(tip);
+//            ArrayList<TipInfo> tipInfos = new ArrayList<>();
+//            TipInfo tipInfo = new TipInfo("","Titulo","descricao");
+//            tipInfos.add(tipInfo);
+//            tipInfo = new TipInfo("","Titulo","descricao");
+//            tipInfos.add(tipInfo);
+//            tipInfo = new TipInfo("","Titulo","descricao");
+//            tipInfos.add(tipInfo);
+//            Tip tip = new Tip("Comportamento",tipInfos);
+//            tips.add(tip);
         }
 
         if(recyclerView.getAdapter() == null){
@@ -58,6 +67,44 @@ public class TipsFragment extends Fragment {
         }
         recyclerView.getAdapter().notifyDataSetChanged();
         // Inflate the layout for this fragment
+
+
+        DatabaseReference mDatabase;// ...
+        mDatabase = FirebaseDatabase.getInstance().getReference("tips");
+        ChildEventListener childEventListener = new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String previousChildName) {
+
+                // A new comment has been added, add it to the displayed list
+                Tip tip = dataSnapshot.getValue(Tip.class);
+                tips.add(tip);
+                Collections.shuffle(tips);
+                recyclerView.getAdapter().notifyDataSetChanged();
+                // ...
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String previousChildName) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+
+        };
+        mDatabase.addChildEventListener(childEventListener);
         return view;
     }
 
