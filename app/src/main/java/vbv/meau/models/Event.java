@@ -8,11 +8,15 @@ import java.util.Date;
 
 public class Event {
     private String nome;
-    private Date data;
+    private String data;
     private String local;
     private String informacoes;
 
-    public Event(String nome, Date data, String local, String informacoes) {
+    public Event(){
+
+    }
+
+    public Event(String nome, String data, String local, String informacoes) {
         this.nome = nome;
         this.data = data;
         this.local = local;
@@ -27,11 +31,11 @@ public class Event {
         this.nome = nome;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 

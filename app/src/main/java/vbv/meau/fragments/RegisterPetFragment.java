@@ -23,7 +23,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import vbv.meau.R;
 import vbv.meau.models.Pet;
@@ -54,8 +56,10 @@ public class RegisterPetFragment extends Fragment {
     private CheckBox visita;
     private CheckBox acompanhamento;
 
-    private String nomeString;
-    private String tipo;
+    private ArrayList<String> urls;
+
+    private String nomeString = "Luke";
+    private String tipo = "adocao";
 
 
     @Override
@@ -65,16 +69,33 @@ public class RegisterPetFragment extends Fragment {
         View view = inflater.inflate(R.layout.register_pet_fragment, container, false);
         Button confirm_button = (Button) view.findViewById(R.id.confirm_button);
 
+
+        urls = new ArrayList<>();
+        urls.add("http://s2.glbimg.com/wB2k5I1ty4iVdwzurRl40rcoSqo=/e.glbimg.com/og/ed/f/original/2017/07/20/beach-1790049_960_720.jpg");
+        urls.add("http://mensagens.culturamix.com/blog/wp-content/gallery/mensagens-sobre-cachorros-parte-2/mensagens-sobre-cachorros-parte-2-2.jpg");
+        urls.add("https://abrilsuperinteressante.files.wordpress.com/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png");
+        urls.add("http://conexaoplaneta.com.br/wp-content/uploads/2017/11/donos-cachorros-menos-chance-doencas-cardiovasculares-conexao-planeta.jpg");
+        urls.add("http://lupusalimentos.com.br/system/wp-content/uploads/2016/10/Por-que-os-cachorros-t%C3%AAm-a-l%C3%ADngua-azulLupusAlimentos.jpg");
+        urls.add("https://tudoela.com/wp-content/uploads/2016/07/Sonhar-com-cachorro.jpg");
+        urls.add("http://cachorrosfofos.com.br/wp-content/uploads/2017/09/raca-de-cachorro-grande-Labrador-retriever-01-638x368.jpg");
+        urls.add("https://cdn.vidanimal.com.br/wp-content/uploads/racas-famosas-cachorro-terapia.jpg");
         confirm_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = mDatabase.getReference();
-                Pet pet = new Pet("Luke", "Macho","Grande","Adulto",
+                Random randomGenerator = new Random();
+                int index = randomGenerator.nextInt(urls.size());
+                String url = urls.get(index);
+                String nomeAux = nome.getText().toString();
+                if(nomeAux.length() > 0){
+                    nomeString = nomeAux;
+                }
+                Pet pet = new Pet(nomeString, "Macho","Grande","Adulto",
                         "Sudoeste","Sem doenças","Nenhuma","Dócil",
                         "Termos de adoção, fotos da casa, visita prévia","Animal muito dócil",
-                        "http://portalmelhoresamigos.com.br/wp-content/uploads/2016/05/beijo_lambida_cachorro.png","Ração, remédios",
-                        "adoção",false);
+                        url,"Ração, remédios",
+                        tipo,false);
 
                 myRef.child("pets").push().setValue(pet);
                 Fragment fragment = new ConfirmedPetRegistrationFragment();
@@ -112,10 +133,10 @@ public class RegisterPetFragment extends Fragment {
 
 
 
-
         buttonAdotar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                tipo = "adocao";
                 buttonAdotar.setBackgroundColor(Color.parseColor("#ffd358"));
                 buttonApadrinhar.setBackgroundColor(Color.parseColor("#f1f2f2"));
                 buttonAjuda.setBackgroundColor(Color.parseColor("#f1f2f2"));
@@ -126,6 +147,7 @@ public class RegisterPetFragment extends Fragment {
         buttonApadrinhar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                tipo = "apadrinhamento";
                 buttonApadrinhar.setBackgroundColor(Color.parseColor("#ffd358"));
                 buttonAjuda.setBackgroundColor(Color.parseColor("#f1f2f2"));
                 buttonAdotar.setBackgroundColor(Color.parseColor("#f1f2f2"));
@@ -136,6 +158,7 @@ public class RegisterPetFragment extends Fragment {
         buttonAjuda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                tipo = "ajuda";
                 buttonAjuda.setBackgroundColor(Color.parseColor("#ffd358"));
                 buttonApadrinhar.setBackgroundColor(Color.parseColor("#f1f2f2"));
                 buttonAdotar.setBackgroundColor(Color.parseColor("#f1f2f2"));

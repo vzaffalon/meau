@@ -10,6 +10,10 @@ public class Tip {
     private String categoria;
     private ArrayList<TipInfo> tipInfo;
 
+    public Tip(){
+
+    }
+
     public Tip(String categoria, ArrayList<TipInfo> tipInfo) {
         this.categoria = categoria;
         this.tipInfo = tipInfo;

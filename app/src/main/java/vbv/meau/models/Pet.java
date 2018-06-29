@@ -1,12 +1,13 @@
 package vbv.meau.models;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by vzaffalon on 10/05/2018.
  */
 
-public class Pet {
+public class Pet implements Serializable {
     private String nome;
     private String sexo;
     private String porte;
@@ -22,6 +23,9 @@ public class Pet {
     private String tipo_de_cadastro; //auxilio,ajuda, apadrinhamento
     private boolean favorito;
 
+    public Pet(){
+
+    }
 
     public Pet(String nome, String sexo, String porte, String idade, String localizacao, String saude, String doencas, String temperamento, String exigencias_do_doador, String sobre_o_animal, String fotos, String necessidades_animal, String tipo_de_cadastro, boolean favorito) {
         this.nome = nome;

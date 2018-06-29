@@ -6,8 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -44,6 +47,7 @@ public class MyPetsAdapter extends RecyclerView.Adapter<MyPetsAdapter.ViewHolder
     public void onBindViewHolder(final ViewHolder holder,final int position) {
         Pet pet = pets.get(position);
         holder.name.setText(pet.getNome());
+        Picasso.get().load(pet.getFotos()).into(holder.foto);
 
         //button click
         if(onItemClickListener != null){
@@ -66,11 +70,13 @@ public class MyPetsAdapter extends RecyclerView.Adapter<MyPetsAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView name;
         public LinearLayout adapter_layout;
+        public ImageView foto;
 
         public ViewHolder(View view){
             super(view);
             name = (TextView) view.findViewById(R.id.name_text_view);
             adapter_layout = (LinearLayout) view.findViewById(R.id.adapter_pets);
+            foto = (ImageView) view.findViewById(R.id.foto);
         }
     }
 

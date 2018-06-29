@@ -7,10 +7,24 @@ package vbv.meau.models;
 public class Chat {
     private String nome;
     private String descricao;
+    private String foto;
 
-    public Chat(String nome, String descricao) {
+    public Chat(){
+
+    }
+
+    public Chat(String nome, String descricao,String foto) {
         this.nome = nome;
         this.descricao = descricao;
+        this.foto = foto;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
     public String getNome() {

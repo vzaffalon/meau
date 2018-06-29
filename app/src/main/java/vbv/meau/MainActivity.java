@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
                                 changeFragment(adoptPetFragment);
                                 break;
                             case 7:
-                                HelpPetFragment helpPetFragment = new HelpPetFragment();
+                                AdoptPetFragment helpPetFragment = new AdoptPetFragment();
                                 changeFragment(helpPetFragment);
                                 break;
                             case 8:
@@ -229,23 +229,27 @@ public class MainActivity extends AppCompatActivity {
     private void startFirebase(){
         FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = mDatabase.getReference();
-
-        Event event = new Event("Feira de adoção do guara", new Date(),"Guara 2","A feira ocorrera para arrecadar fundo para...");
-        myRef.child("events").push().setValue(event);
-
-
-        User user = new User("Victor Zaffalon","22","zaffalonvictor@gmail.com","DF",
-                "brasilia","SQSW 202","6199923333","vzaffalon","123456","teste","teste_id");
-        myRef.child("users").push().setValue(user);
-
-        Chat chat = new Chat("Victor Zaffalon","teste chat");
-        myRef.child("chats").push().setValue(chat);
-
-        TipInfo tipInfo = new TipInfo("imagem_a","Como cuidar da unha do seu cão","para cuida da unha do seu cao...");
+//
+//        Event event = new Event("Feira de adoção do guara", "Domingo 15 de outubro","Guara 2","A feira ocorrera para arrecadar fundo para...");
+//        myRef.child("events").push().setValue(event);
+//
+//
+//        User user = new User("Victor Zaffalon","22","zaffalonvictor@gmail.com","DF",
+//                "brasilia","SQSW 202","6199923333","vzaffalon","123456","teste","teste_id");
+//        myRef.child("users").push().setValue(user);
+//
+//        Chat chat = new Chat("Victor Araujo","testando o chat","https://scontent.fbsb3-1.fna.fbcdn.net/v/t1.0-9/16473639_1612574495424518_7263760929558824814_n.jpg?_nc_cat=0&oh=474c7ebd3b9dfef593d9d2aa2c5758ae&oe=5BB6A09E");
+//        myRef.child("chats").push().setValue(chat);
+//
+        TipInfo tipInfo = new TipInfo("imagem_a","Cortando unha do pet","para cuidar da unha do seu cão...");
         ArrayList<TipInfo> tipInfos = new ArrayList<>();
         tipInfos.add(tipInfo);
-        Tip tip = new Tip("Saude",tipInfos);
-        myRef.child("tips").push().setValue(chat);
+        tipInfo = new TipInfo("imagem_a","Dando banho no pet","para cuidar da unha do seu cão...");
+        tipInfos.add(tipInfo);
+        tipInfo = new TipInfo("imagem_a","Penteando o cabelo do seu pet","para cuidar da unha do seu cão...");
+        tipInfos.add(tipInfo);
+        Tip tip = new Tip("Beleza",tipInfos);
+        myRef.child("tips").push().setValue(tip);
 
     }
 

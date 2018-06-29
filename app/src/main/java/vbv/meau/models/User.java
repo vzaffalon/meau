@@ -17,6 +17,10 @@ public class User {
     private String url_foto;
     private String id_usuario_firebase;
 
+    public User(){
+
+    }
+
     public User(String nome_completo, String idade, String email, String estado, String cidade, String endereco, String celular, String usuario, String senha, String url_foto, String id_usuario_firebase) {
         this.nome_completo = nome_completo;
         this.idade = idade;

@@ -43,7 +43,10 @@ public class TipsAdapter  extends RecyclerView.Adapter<TipsAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(final TipsAdapter.ViewHolder holder, final int position) {
         Tip tip = tips.get(position);
-        holder.name.setText(tip.getCategoria());
+        holder.nome.setText(tip.getCategoria());
+        holder.desc1.setText(tip.getTipInfo().get(0).getTitulo());
+        holder.desc2.setText(tip.getTipInfo().get(1).getTitulo());
+        holder.desc3.setText(tip.getTipInfo().get(2).getTitulo());
 
         //button click
         if(onItemClickListener != null){
@@ -64,12 +67,18 @@ public class TipsAdapter  extends RecyclerView.Adapter<TipsAdapter.ViewHolder> {
     //viewholder com as views
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView name;
+        public TextView nome;
+        public TextView desc1;
+        public TextView desc2;
+        public TextView desc3;
         public LinearLayout adapter_layout;
 
         public ViewHolder(View view){
             super(view);
-            name = (TextView) view.findViewById(R.id.name_text_view);
+            nome = (TextView) view.findViewById(R.id.nome);
+            desc1 = (TextView) view.findViewById(R.id.desc1);
+            desc2 = (TextView) view.findViewById(R.id.desc2);
+            desc3 = (TextView) view.findViewById(R.id.desc3);
             adapter_layout = (LinearLayout) view.findViewById(R.id.adapter_tips);
         }
     }

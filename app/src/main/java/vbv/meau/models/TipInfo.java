@@ -9,6 +9,10 @@ public class TipInfo {
     private String titulo;
     private String descricao;
 
+    public TipInfo(){
+
+    }
+
     public TipInfo(String image, String titulo, String descricao) {
         this.image = image;
         this.titulo = titulo;
