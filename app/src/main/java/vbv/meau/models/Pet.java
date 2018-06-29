@@ -10,6 +10,7 @@ public class Pet {
     private String nome;
     private String sexo;
     private String porte;
+    private String especie; // cachorro ou gato
     private String idade;
     private String localizacao;
     private String saude;
@@ -23,10 +24,11 @@ public class Pet {
     private boolean favorito;
 
 
-    public Pet(String nome, String sexo, String porte, String idade, String localizacao, String saude, String doencas, String temperamento, String exigencias_do_doador, String sobre_o_animal, String fotos, String necessidades_animal, String tipo_de_cadastro, boolean favorito) {
+    public Pet(String nome, String sexo, String porte, String especie, String idade, String localizacao, String saude, String doencas, String temperamento, String exigencias_do_doador, String sobre_o_animal, String fotos, String necessidades_animal, String tipo_de_cadastro, boolean favorito) {
         this.nome = nome;
         this.sexo = sexo;
         this.porte = porte;
+        this.especie = especie;
         this.idade = idade;
         this.localizacao = localizacao;
         this.saude = saude;
@@ -63,6 +65,15 @@ public class Pet {
     public void setPorte(String porte) {
         this.porte = porte;
     }
+
+    public String getEspecie() {
+        return especie;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+
 
     public String getIdade() {
         return idade;

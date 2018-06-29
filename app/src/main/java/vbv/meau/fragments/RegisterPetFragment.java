@@ -70,7 +70,7 @@ public class RegisterPetFragment extends Fragment {
             public void onClick(View v) {
                 FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = mDatabase.getReference();
-                Pet pet = new Pet("Luke", "Macho","Grande","Adulto",
+                Pet pet = new Pet("Luke", "Macho","Grande", "Cachorro","Adulto",
                         "Sudoeste","Sem doenças","Nenhuma","Dócil",
                         "Termos de adoção, fotos da casa, visita prévia","Animal muito dócil",
                         "http://portalmelhoresamigos.com.br/wp-content/uploads/2016/05/beijo_lambida_cachorro.png","Ração, remédios",
