@@ -22,13 +22,15 @@
 
     <EditText
         android:layout_marginTop="50dp"
+        android:id="@+id/loginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColorHint="#bdbdbd"
         android:backgroundTint="#bdbdbd"
-        android:hint="Nome de usuário"/>
+        android:hint="Email"/>
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/loginPassword"
         android:layout_height="wrap_content"
         android:textColorHint="#bdbdbd"
         android:backgroundTint="#bdbdbd"
